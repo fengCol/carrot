@@ -1,0 +1,19 @@
+<div class="companyDetail">
+    <div class="companyProduct">
+        <h4>公司产品</h4>
+        <div>
+            <img ng-src="{{vm.companyDescriptionRes.productList[0].logo}}">
+            <div>
+                <h4>{{vm.companyDescriptionRes.productList[0].name}}</h4>
+                <p>{{vm.companyDescriptionRes.productList[0].summary}}</p>
+                <p class="slogan">{{vm.companyDescriptionRes.productList[0].slogan}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="introduceCompany">
+        <h4>公司介绍</h4>
+        <p>
+            {{vm.companyDescriptionRes.company.summary}}
+        </p>
+    </div>
+</div>

@@ -1,0 +1,144 @@
+@media screen and (min-width: 992px){
+    .jobListPage{
+        border-right: 2px solid #F4F4F4;
+    }
+}
+.jobDescription{
+    background-color: #FFF;
+    padding-top: 35px;
+    padding-bottom: 25px;
+    padding-left: 20px;
+}
+.job{
+    border-bottom: 1px solid #E8E8E8;
+    padding-bottom: 40px;
+}
+.job h3{
+    font-weight: bold;
+}
+.v-middle{
+    vertical-align: middle;
+}
+h4{
+    font-size: 16px;
+    font-weight: bold;
+}
+.font-12{
+    font-size: 12px;
+}
+.color-fc2a48{
+    color: #FC2A48;
+}
+.color-536a82{
+    color: #536a82;
+}
+.lineHeight-32 span{
+    display: inline-block;
+    padding-right: 10px;
+}
+.salaryBox{
+    display: inline-block;
+    margin-right: 20px;
+    padding: 0 10px;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+    font-size: 12px;
+}
+.createTime{
+    color: #999;
+    font-size: 12px;
+}
+.lineHeight-32{
+    line-height: 32px;
+}
+.describe{
+    margin-top: 32px;
+    line-height: 26px;
+}
+.describe h4{
+    padding-left: 8px;
+    border-left: 5px solid #FC2B47;
+
+}
+.font-16{
+    font-size: 16px;
+}
+.paddingTop-25{
+    padding-top: 25px;
+}
+.share{
+    margin-top: 28px;
+    margin-bottom: 28px;
+}
+.weChart{
+    color: #00D40A;
+    font-size: 34px;
+}
+.qq{
+    color: #00BCFB;
+    font-size: 34px;
+}
+.weibo{
+    color: #FF3838;
+    font-size: 34px;
+}
+.interested{
+    float: right;
+    text-align: center;
+    width: 128px;
+    height: 40px;
+    color: #FFF;
+    background-color: #FC2B47;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    outline: none;
+}
+/*公司信息*/
+.companyDescription{
+    line-height: 50px;
+}
+.companyLogo{
+    width: 145px;
+    height: 145px;
+    border:1px solid #E8E8E8;
+    cursor: pointer;
+}
+.text-center{
+    text-align: center;
+}
+.companyDescription h4{
+    margin-left: 25px;
+    height: 50px;
+    line-height: 50px;
+}
+.line{
+    display: inline-block;
+    margin-bottom: 6px;
+    width: 65%;
+    height: 1px;
+    background-color: #E8E8E8;
+}
+.marginLeft-60{
+    margin-left: 60px;
+}
+.color-white{
+    color: white;
+}
+.modal-content{
+    margin-top: 100px;
+}
+.modal-header{
+    text-align: center;
+    background-color: #FC2A48;
+}
+.modal-body{
+    padding: 25px 70px;
+    line-height: 30px;
+}
+.modal-body-title{
+    font-size: 16px;
+}
+pre{
+    background-color: #FFF;
+    border: none;
+}

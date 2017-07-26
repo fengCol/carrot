@@ -1,0 +1,358 @@
+html {overflow-x:hidden;}
+/*nav开始*/
+.navbar-default {
+    border: 0 none;
+}
+.nav-list {
+    background-color:#ffffff;
+    height: 80px;
+}
+.navbar-toggle {
+    margin-top: -30px;
+}
+
+.navbar-nav li{
+    text-align: center;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ffffff;
+}
+.navbar-default .navbar-toggle {
+    background-color: rgba(252, 43, 71, .8)
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: rgba(252, 43, 71, .8)
+}
+
+.collapse {
+    float: right;
+    font-size: 16px;
+    padding-top: 21px;
+    padding-bottom: 10px;
+}
+@media screen and (max-width: 767px){
+    .collapse {
+        float: none;
+        padding-top:0;
+    }
+}
+
+.nav li a:hover {
+    color: #fc2b47 !important;
+    border-bottom: 2px solid #fc2b47 ;
+    transition:  .3s;
+}
+.nav {
+    position: relative;
+    z-index: 100;
+    background-color: #ffffff;
+}
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0;
+}
+.nav-img {
+    padding-top: 17px;
+}
+.nav-chose {
+    color: #fc2b47 !important;
+    border-bottom: 2px solid #fc2b47 ;
+}
+.nav li a {
+    padding-bottom: 25px;
+}
+.nav>li>a {
+    padding:0 0;
+    padding-bottom:26px;
+    margin: 10px 15px;
+    margin-bottom:0;
+}
+.head-left-img {
+    border-right:1px solid #cccccc;
+    padding-right:20px;
+}
+.head-right-img {
+    padding-left:20px;
+
+}
+.head-right-img+span{
+    vertical-align: middle;
+}
+@media screen and (max-width: 992px){
+    .head-left-img {
+        border:0;
+    }
+    .head-right-img{
+        display: none;
+        padding-left:0;
+    }
+    .head-right-img+span {
+        display: none;
+    }
+}
+/*nav结束*/
+.findJobTotal{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #F6F7F8;
+}
+/*footer开始*/
+.footer-padding {
+    padding-top: 25px;
+    padding-bottom: 30px;
+    color: #b0b0b0;
+}
+
+.qr-img {
+    padding-left: 30px;
+}
+@media screen and (max-width: 992px){
+    .qr-img {
+        padding-left:0;
+    }
+}
+.index-title {
+    font-size: 16px;
+    display: block;
+    padding-bottom: 10px;
+    color: #b0b0b0;
+}
+.index-title span {
+    font-size: 14px;
+}
+.index-title:hover {
+    color: #eb5255;
+}
+.icon-size {
+    font-size: 20px;
+}
+.footer-bottom {
+    text-align: center;
+    background-color: #37485a;
+    color: #ffffff;
+}
+@media screen and (max-width: 992px){
+    .footer-left {
+        padding-bottom: 20px;
+    }
+    .footer-center {
+        padding-bottom: 20px;
+    }
+}
+/*footer结束*/
+.clear-padding {
+    padding: 0;
+}
+.clear-margin {
+    margin: 0;
+}
+.home-line {
+    margin: 4px auto;
+    width: 30px;
+    height: 3px;
+    background-color: red;
+}
+.text-title {
+    text-align: center;
+}
+/*轮播*/
+.carousel-butten {
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-indicators > li {
+    width: 12px !important;
+    height: 12px !important;
+}
+
+.carousel-inner > .item > img {
+    width: 100%;
+}
+
+.edit-area-text {
+    width: 100%;
+    border: none;
+    white-space: pre-wrap;
+    text-align: justify;
+    color: #536a82;
+    background-color: white;
+}
+
+
+/*分页*/
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus {
+    background-color:  #fc2b47;
+    border-color:  #fc2b47;
+}
+/*重置轮播图样式*/
+.glyphicon-chevron-left:before {
+    content: "";
+}
+.glyphicon-chevron-right:before {
+    content: "";
+}
+.carousel-indicators {
+    display: none;
+}
+.carousel-control.left {
+    background-image: none;
+}
+.carousel-control.right {
+    background-image: none;
+}
+/*.no-items {*/
+    /*display: none;*/
+/*}*/
+.bg-f7 {
+    background-color: #f6f7f8;
+}
+
+.company-main {
+    padding: 0;
+    cursor: pointer;
+}
+.company-content {
+    display: flex;
+    margin: 10px;
+    text-align: center;
+}
+.middle-img-box {
+    height: 110px;
+    width: 110px;
+    font-size: 0;
+    text-align: center;
+    box-sizing: content-box;
+}
+.middle-img-box img{
+    width: 112px;
+    height: 112px;
+}
+.company-content > div:last-child {
+    margin-left: 22px;
+    text-align: left;
+}
+@media screen and (max-width: 1200px){
+    .companybox-content {
+        width: 42%;
+    }
+}
+.company-list {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.company-card {
+    padding: 20px
+}
+
+.company-main {
+    padding: 0;
+    cursor: pointer;
+}
+.company-content {
+    display: flex;
+    text-align: center;
+}
+.company-content > div:nth-child(3) {
+    font-size: 18px
+}
+.company-content > div:last-child {
+    margin-left: 22px;
+    text-align: left
+}
+.company-content, .right-company {
+    display: -webkit-box;
+    display: -ms-flexbox
+}
+.left-payroll {
+    margin: 15px 0;
+    color: #fc2a48;
+    font-weight: 700;
+}
+.company-type, .left-jobmsg {
+    color: #536a82
+}
+.right-company {
+    display: flex
+}
+.company-nameBox > span:first-child {
+    border: 0
+}
+.company-typeBox {
+    margin: 15px 0 15px -10px;
+    height: 20px;
+    overflow: hidden;
+}
+.company-type {
+    line-height: 14px;
+    display: inline-block;
+    padding: 0 10px;
+    border-left: 1px solid #d9d9d9
+}
+.company-type:first-child {
+    border: none
+}
+.company-welfare {
+    height: 22px;
+    overflow: hidden;
+}
+.more-hover:hover {
+    color: #2d3e50;
+    text-decoration: none;
+}
+.company-welfare > span {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 0 10px;
+    min-width: 70px;
+    line-height: 20px;
+    border: 1px solid #d9d9d9;
+    border-radius: 20px;
+    text-align: center;
+    color: #536a82;
+    font-size: 12px;
+}
+.companyLogo, .middle-img-box {
+    border: 1px solid #E8E8E8;
+}
+.middle-img-box {
+    height: 110px;
+    width: 110px;
+    text-align: center;
+    font-size: 0;
+    box-sizing: content-box;
+    overflow: hidden;
+}
+.company-content {
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+.company-content:hover {
+    box-shadow: 0 0 7px #E2E2E2;
+}
+.no-items {
+    display:none;
+}
+.cursor-pointer {
+    cursor:pointer;
+}
+.title {
+    padding-bottom:10px;
+}
+.title:hover{
+    color: #fc2b47;
+}
+
+
+
+
+
+

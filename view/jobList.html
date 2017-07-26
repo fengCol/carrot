@@ -1,0 +1,99 @@
+<main class="joblist">
+    <!--筛选面板-->
+    <div class="job-title container">
+        <p ng-bind="vm.title"></p>
+    </div>
+    <div class="container list-box">
+        <div class="row select-search">
+            <div class="job-search">
+                <label>关&nbsp;&nbsp;键&nbsp;&nbsp;词：</label><input type="text" ng-model="vm.name"  placeholder="请输入搜索内容" class="job-input">
+                <span ng-if="vm.name!=''" class="search-remind-word">当前关键字：{{vm.name}}</span>
+            </div>
+            <div class="job-search">
+                <label>所在地区：</label>
+                <a ng-repeat="list in vm.option.province"
+                   ng-click="vm.checkboxMulti($index,vm.option.province)"
+                   ng-class="{true:'default'}[list.choose]" class="cursor-pointer">{{list.name}}</a>
+            </div>
+            <div class="job-search">
+                <label>所属行业：</label>
+                <a ng-repeat="list in vm.option.industry"
+                   ng-click="vm.checkboxMulti($index,vm.option.industry)"
+                   ng-class="{true:'default'}[list.choose]" class="cursor-pointer">{{list.name}}</a>
+            </div>
+            <div class="job-search">
+                <label>学历要求：</label>
+                <a ng-repeat="list in vm.option.education"
+                   ng-click="vm.checkboxMulti($index,vm.option.education)"
+                   ng-class="{true:'default'}[list.choose]" class="cursor-pointer">{{list.name}}</a>
+            </div>
+            <div class="job-search">
+                <label>工作经验：</label>
+                <a ng-repeat="list in vm.option.experience"
+                   ng-click="vm.checkboxMulti($index,vm.option.experience)"
+                   ng-class="{true:'default'}[list.choose]" class="cursor-pointer">{{list.name}}</a>
+            </div>
+            <div class="job-search">
+                <label>薪资水平：</label>
+                <a ng-repeat="list in vm.option.compensation"
+                   ng-click="vm.checkboxMulti($index,vm.option.compensation)"
+                   ng-class="{true:'default'}[list.choose]" class="cursor-pointer">{{list.name}}</a>
+            </div>
+            <div class="job-search">
+                <label>发布时间：</label>
+                <a ng-repeat="list in vm.option.updateAt"
+                   ng-click="vm.checkboxMulti($index,vm.option.updateAt)"
+                   ng-class="{true:'default'}[list.choose]" class="cursor-pointer">{{list.name}}</a>
+            </div>
+            <button class="search-list cursor-pointer" ng-click="vm.search()" >搜索</button>
+            <button class="clear-list cursor-pointer" ng-click="vm.clear()">清除</button>
+        </div>
+    </div>
+    <!--职位列表页-->
+    <div class="container list-box ">
+        <div class="row job-border" ng-repeat="jobList in jobList track by $index" index="$index" ui-sref="jobDescription({id:jobList.id})">
+            <div class="col-md-6">
+                <div class="left-box">
+                    <div class="left-top">
+                        <span class="job-name">{{jobList.name}}</span>
+                        <span class="time-color">发布时间：</span>
+                        <span class="time-color">{{jobList.updateAt|updateAtFilter}}</span>
+                    </div>
+                    <p class="job-money">{{jobList.compensation|compensationFilter}}</p>
+                    <div>
+                        <span>{{jobList.province|provinceFilter}}<span>/</span> </span>
+                        <span>{{jobList.city|cityFilter }}<span>/</span></span>
+                        <span>{{jobList.county|countyFilter}}<span>/</span></span>
+                        <span>{{jobList.education|educationFilter}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-xs-9 right-set">
+                    <div class="right-box">
+                        <div class="cpy-name left-top">
+                            <span>{{jobList.companyName}}</span>
+                        </div>
+                        <div class="set-indy left-top">
+                            <span  ng-repeat="type in jobList.industryList track by $index">{{type.industry|industryFilter}}</span>
+                        </div>
+                        <div class="set-tags">
+                            <span ng-repeat="tag in jobList.tags track by $index" >{{tag.tag}}</span>
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <img ng-src="{{jobList.logo}}" alt="" class="logo-img">
+                </div>
+
+            </div>
+        </div>
+        <div>
+            <tm-pagination conf="paginationConf"></tm-pagination>
+        </div>
+        <not-find ng-if="vm.isNotFind" showrecommend="{{vm.isShowRecommend}}" size="4"></not-find>
+    </div>
+</main>

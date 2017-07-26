@@ -1,0 +1,214 @@
+
+<main>
+    <!--首页轮播-->
+    <div style="height:500px">
+        <div uib-carousel active="vm.active" interval="vm.myInterval" >
+            <div uib-slide  ng-repeat="homeArticle in vm.homeArticle track by $index" index="$index" >
+                <a href="{{homeArticle.url}}"><img ng-src="{{homeArticle.img}}" style="max-width: 100%; height: 500px;"  ></a>
+            </div>
+        </div>
+    </div>
+    <!--首页轮播结束-->
+
+    <!--轮播图下的大图标开始-->
+    <div class="container ">
+        <div class="row big-img">
+            <div class="col-md-3 big-text ">
+                <img src="images/home/time.png" alt="">
+                <p class="set-time">超短相应时间</p>
+                <p>48小时高效推荐</p>
+            </div>
+            <div class="col-md-3  big-text">
+                <img src="images/home/money.png" alt="">
+                <p class="set-money">行业1/3的价格</p>
+                <p>成功推荐仅收费1月工资</p>
+            </div>
+            <div class="col-md-3  big-text">
+                <img src="images/home/glass.png " alt="">
+                <p class="set-glass">三维的人才评测</p>
+                <p>技术人事背景三维评定</p>
+            </div>
+            <div class="col-md-3 text-border ">
+                <div class="box-text">
+                    <div class="red-color">500+</div>
+                    <div class="text-padding">信赖公司</div>
+                    <div class="red-color ">498人</div>
+                    <div class="text-padding">人才库</div>
+                    <div class="red-color ">98%</div>
+                    <div>人才入职</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--轮播图下的大图标结束-->
+
+    <!--最新职位开始-->
+    <!--<div>-->
+        <!--<div class="home-section-title bg-f7">-->
+            <!--<p class="home-section-font">最新职位</p>-->
+            <!--<div class="home-section-line"></div>-->
+            <!--<p> NEW POSITION</p>-->
+        <!--</div>-->
+        <!--<div class="home-section-newJob bg-f7">-->
+            <!--<div class="container">-->
+                <!--<div class="home-newJob-main">-->
+                    <!--<a class="home-newJob-more more-hover" href="#"-->
+                       <!--ui-sref="jobList({judge:true})">更多&nbsp;>-->
+                    <!--</a>-->
+                    <!--&lt;!&ndash;轮播2号&ndash;&gt;-->
+                    <!--<div id="success-case" class="carousel slide" data-ride="carousel">-->
+                        <!--<div class="position-carousel-inner">-->
+                            <!--<div class="carousel-inner" role="listbox">-->
+                                <!--<div class="clear-pd item" ng-class="{'active':$first}"-->
+                                     <!--ng-repeat="indexbanner in vm.homejob track by $index">-->
+                                    <!--<div ng-repeat="indexone in vm.homejob[$index] track by $index"-->
+                                         <!--class="col-lg-3 col-md-3 col-sm-12  radish-clear-pd success-case-left">-->
+                                        <!--<div class="home-listbox" ui-sref="jobDescription({id:indexone.id})">-->
+                                            <!--<div class="middle-img-box">-->
+                                                <!--<span></span>-->
+                                                <!--<img src={{indexone.logo}} alt=""-->
+                                                     <!--class="img-responsive">-->
+                                            <!--</div>-->
+                                            <!--<div class="font-box">-->
+                                                <!--<p class="home-newJob-name mg-0  word-length-limit">{{indexone.name}}</p>-->
+                                                <!--<div class="home-listbox-line"></div>-->
+                                                <!--<p class="home-newJob-company word-length-limit">-->
+                                                    <!--{{indexone.companyName}}-->
+                                                <!--</p>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; Controls &ndash;&gt;-->
+                        <!--<a ng-non-bindable class="left carousel-control newjob-carousel-left" href="#success-case"-->
+                           <!--onclick="return false"-->
+                           <!--role="button"-->
+                           <!--data-slide="prev">-->
+                        <!--<span class="banner-pre carousel-controls" aria-hidden="true">-->
+                            <!--<img src="images/home/left.png" class="img-responsive" alt="">-->
+                        <!--</span>-->
+                            <!--<span class="sr-only">Previous</span>-->
+                        <!--</a>-->
+                        <!--<a ng-non-bindable class="right carousel-control newjob-carousel-right" href="#success-case"-->
+                           <!--onclick="return false"-->
+                           <!--role="button"-->
+                           <!--data-slide="next">-->
+                        <!--<span class="banner-next carousel-controls" aria-hidden="true">-->
+                            <!--<img src="images/home/right.png" class="img-responsive" alt="">-->
+                        <!--</span>-->
+                            <!--<span class="sr-only">Next</span>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <div class="new-job">
+        <div class="container">
+            <div class="home-title">
+                <h4>最新职位</h4>
+                <div class="home-line"></div>
+                <p>NEW POSITION</p>
+            </div>
+            <div class="container">
+                 <span ui-sref="jobList({judge:true})" class="new-font" >更多&nbsp;></a>
+            </div>
+            <section class="regular slider" slick-slider="{
+    infinite: true,draggable:false,slidesToShow:4,slidesToScroll:4,autoplay:true,dots: false,
+    arrows: true,
+     responsive: [
+      { breakpoint: 900,
+          settings: {vertical:true}}]
+    }">
+                <div class="slick-slide" ng-repeat="item in vm.homejob track by $index" ui-sref="jobDescription({id:item.id})">
+                        <div class="new-img-box">
+                            <img ng-src="{{item.logo}}"/>
+                        </div>
+                        <p  class="new-job-name" ">{{item.name}}</p>
+                        <div class="home-line"></div>
+                        <p  style="text-align:center;">{{item.companyName}}</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <!--最新职位结束-->
+
+    <!--服务流程开始-->
+    <div class="container ">
+        <div class="row home-introduce">
+            <div class="row service-top">
+                <div class="home-title">
+                    <h4>服务流程</h4>
+                    <div class="home-line"></div>
+                    <p>SERVICE FLOW</p>
+                </div>
+                <div class="home-process col-md-2 col-xs-12 service-padding" >
+                    <img src="images/home/01.png" alt="" class="home-img">
+                    <p>1.意向洽谈，深入评审</p>
+                </div>
+                <div class="col-md-2 air col-xs-12">
+                    <img src="images/home/air.png" alt="" class="home-img">
+                </div>
+                <div class="home-process col-md-2 col-xs-12">
+                    <img src="images/home/02.png" alt="" class="home-img">
+                    <p>2.确认合作，签订合同</p>
+                </div>
+                <div class="col-md-2 air col-xs-12">
+                    <img src="images/home/air.png" alt="" class="home-img">
+                </div>
+                <div class="home-process col-md-2 col-xs-12">
+                    <img src="images/home/03.png" alt="" class="home-img">
+                    <p>3.提出需求，提供jd</p>
+                </div>
+            </div>
+            <div class="row service-bottom">
+                <div class="home-process col-md-2 service-padding col-xs-12">
+                    <img src="images/home/04.png" alt="" class="home-img">
+                    <p>4.开始招聘，人才精选</p>
+                </div>
+                <div class="col-md-2 air col-xs-12">
+                    <img src="images/home/air.png" alt="" class="home-img">
+                </div>
+                <div class="home-process col-md-2 col-xs-12">
+                    <img src="images/home/05.png" alt="" class="home-img">
+                    <p>5.人才评测，简历脱水</p>
+                </div>
+                <div class="col-md-2 air col-xs-12">
+                    <img src="images/home/air.png" alt="" class="home-img">
+                </div>
+                <div class="home-process col-md-2 col-xs-12">
+                    <img src="images/home/06.png" alt="" class="home-img">
+                    <p> 6.上岗，转入售后</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--服务流程结束-->
+
+    <!--伙伴之言开始-->
+    <div class="friend ">
+        <div class="container ">
+            <div class="row">
+                <div class="home-title">
+                    <h4>伙伴之言</h4>
+                    <div class="home-line"></div>
+                    <p class="text-title">PARTNER ADVICE</p>
+                </div>
+                <div class="container friend-box">
+                    <!--伙伴之言轮播-->
+                    <jqcarouse ca-id="single-quad"></jqcarouse>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--伙伴之言结束-->
+</main>

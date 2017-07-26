@@ -1,0 +1,101 @@
+@charset "utf-8";
+.a404 {
+    margin: 0;
+}
+.a404 > .container, .searchCompanyChoice {
+    background-color: #fff
+}
+.a404-cont {
+    background-color: white;
+    padding: 40px 0;
+    overflow: hidden;
+}
+.notFindLine {
+    margin: 20px 5px;
+    display: block;
+    height: 1px;
+    background-color: #e8e8e8;
+}
+@media screen and (min-width: 768px) {
+    .notfind-img-sm {
+        float: right;
+    }
+    .a404-cont img{
+        margin-top: 60px;
+    }
+    .a404-text {
+
+        padding: 150px 30px 50px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .notfind-img-sm {
+        margin: 0 auto;
+    }
+    .a404-text {
+        padding: 20px;
+    }
+
+    .notfind-text-sm {
+        text-align: center;
+    }
+}
+.a404-text1 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #2b3d51;
+}
+.a404-text2 {
+    font-size: 17px;
+    color: #536a82;
+}
+.searchRecomendChoice {
+    padding: 20px 0 10px 0;
+}
+.earchCompanyList-title {
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: 700
+}
+.width-100 {
+    width: 100%;
+}
+/*推荐内容部分css*/
+.findJob-payroll {
+    color: #fc2b47;
+    font-size: 16px;
+}
+.findJob-position {
+    color: #2d3e50;
+}
+.findJob-jobList-text p {
+    margin-bottom: 10px;
+}
+.findJob-companyName {
+    color: #536a82;
+}
+.marginLeft-30{
+    margin-left: -30px;
+}
+.word-length-limit{
+    margin-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.img-box{
+    width: 90px;
+    height: 90px;
+    border:1px solid #E9E9E9;
+}
+.img-box img{
+    width: 90px;
+    height: 90px;
+}
+
+@media screen and (min-width: 1200px) {
+    .companybox-content{
+        width: 100px;
+    }
+}

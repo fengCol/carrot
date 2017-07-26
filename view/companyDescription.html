@@ -1,0 +1,63 @@
+<main class="findJobTotal">
+    <div class="container">
+        <!--公司介绍-->
+        <div class="row companyIntroduceOne">
+            <div class="companyIntroduceOneList">
+                <div class="companyIntroduceLogo">
+                    <img ng-src="{{vm.companyDescriptionRes.company.logo}}">
+                </div>
+                <div class="companyName">
+                    <div>
+                        <h4 class="d-inlineblock">{{vm.companyDescriptionRes.company.name}}</h4>
+                        <div ng-if="(vm.companyDescriptionRes.company.approved==1)" class="d-inlineblock approve">
+                            <i class="iconfont icon-v"></i>
+                            <span>萝卜多认证</span>
+                        </div>
+                    </div>
+                    <p>{{vm.companyDescriptionRes.company.slogan}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="companyContent row">
+            <div class="col-xs-12 options">
+                <span ng-click="vm.exchangeJob(!vm.choose)" ng-class="{'change':!vm.choose}"
+                      data-ui-sref="companyDescription.companyProduct({id:vm.companyDescriptionRes.company.id})" >公司详情</span>
+                <span ng-click="vm.exchangeJob(vm.choose)" ng-class="{'change':vm.choose}"
+                      data-ui-sref="companyDescription.recruitJob({id:vm.companyDescriptionRes.company.id})">在招职位</span>
+            </div>
+            <div class="col-xs-12 col-md-8 checkbox" data-ui-view=""></div>
+            <!--公司信息-->
+            <div class="col-xs-12 col-md-4 companyDescription">
+                <h4>
+                    公司信息
+                    <span class="line"></span>
+                </h4>
+                <div class="marginLeft-60">
+                    <p>
+                        <img src="images/findJobs/person-number.png" class="v-middle marginRight-10">
+                        <span class="v-middle">{{vm.companyDescriptionRes.company.totalNum}}</span>
+                    </p>
+                    <p>
+                        <img src="images/findJobs/industry.png" class="v-middle marginRight-10">
+                        <span ng-repeat="industryJson in vm.companyDescriptionRes.industryList track by $index" class="v-middle">
+                            {{industryJson.industry|industryFilter}}&nbsp;
+                        </span>
+                    </p>
+                    <p>
+                        <img src="images/findJobs/address.png" class="v-middle marginRight-10">
+                        <span class="v-middle">{{vm.companyDescriptionRes.company.province|provinceFilter}}</span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4 companyDescription companyTag">
+                <h4>
+                    公司标签
+                    <span class="line"></span>
+                </h4>
+                <div class="marginLeft-60">
+                    <p ng-repeat="tag in vm.companyDescriptionRes.tagList track by $index">{{tag.tag}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

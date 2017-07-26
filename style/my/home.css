@@ -1,0 +1,265 @@
+.home-title {
+    text-align: center;
+   padding: 80px 0 50px 0;
+}
+.home-title h4 {
+    font-weight: bold;
+}
+/*轮播图下大图标开始*/
+.big-text{
+    text-align: center;
+    padding-top:30px;
+}
+
+@media screen and (max-width: 992px){
+    .glass {
+        border: 0 none
+    ;
+    }
+}
+/*轮播图下大图标结束*/
+.set-time{
+    margin-top: 14px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.set-money {
+    margin-top: 18px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.set-glass {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.list {
+    padding-left: 40px;
+}
+.list p {
+    font-weight: bold;
+}
+.red-color {
+    color: red;
+}
+.big-img  {
+    padding: 60px 0 70px 0 ;
+}
+.home-introduce {
+    padding: 0 0 70px 0;
+}
+.text-box {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    width: 0.7rem;
+}
+.text-border {
+    border-left:1px solid #cccccc;
+    padding-left:70px;
+}
+.text-padding {
+    padding-bottom:22px;
+}
+@media screen and (max-width:991px){
+    .text-border {
+        border-left:0;
+        padding-left:0;
+        text-align:center;
+    }
+    .box-text{
+        padding-top:20px;
+    }
+}
+/*最新职位开始*/
+.new-job {
+    background-color:#f6f7f8;
+}
+.slick-slide {
+  width:240px;
+    height:260px;
+    margin-left: 20px;
+    border-radius:5px;
+    cursor:pointer;
+    background-color:#ffffff;
+    outline:none;
+}
+ .slider .slick-prev,
+.home-controller .home-job-banner .slider .slick-prev:hover {
+    content:"";
+    top: 50%;
+     right:-54px;
+    height: 38px;
+    width: 30px;
+    background-image: url(../../images/home/left.png);
+}
+ .slider .slick-next,
+.home-controller .home-job-banner .slider .slick-next:hover {
+    content:"";
+    top: 54%;
+     right:-50px;
+    height: 38px;
+    width: 30px;
+    background-image: url(../../images/home/right.png);
+}
+ .new-job-name {
+    text-align:center;
+     font-weight:bold;
+     font-size:16px;;
+ }
+ .new-img-box {
+     border-bottom:1px solid #cccccc;
+ }
+.new-img-box img {
+    margin:0 auto;
+    max-height: 178px;
+    max-width:100%;
+}
+ @media screen and (max-width:992px){
+     .slick-slide {
+         margin-top:30px;;
+     }
+ }
+.slick-slider {
+    margin-bottom: 70px;
+}
+.new-font {
+    float:right;
+    padding-right: 24px;
+    font-size: 16px;
+    font-weight:400;
+    cursor:pointer;
+    padding-bottom:20px;
+}
+/*最新职位结束*/
+/*服务流程开始*/
+
+.service-top {
+    margin-bottom: 40px;
+
+}
+.service-padding {
+    margin-left: 99px;
+}
+
+.home-process{
+    padding-top: 20px;
+    text-align: center;
+}
+.home-process p{
+    border: 1px solid #cccccc;
+    padding: 10px 0;
+    text-align: center;
+    /*padding-left: 40px;*/
+}
+.home-process img {
+    max-width: 100%;
+}
+@media screen and (max-width: 992px){
+    .service-padding {
+        margin-left: 0;
+    }
+    .home-process p{
+        border:0;
+    }
+}
+.air {
+    border-top: 1px dashed ;
+    border-image: url(http://luoboduo.com/images/border-img.png)10;
+
+    margin-top: 100px;
+    position: relative;
+}
+.air img {
+    position: absolute;
+    top: -14px;
+    left: 90px;
+}
+
+@media screen and (max-width: 992px){
+    .home-img {
+      margin: 0 auto;
+    }
+    .air {
+      display: none;
+    }
+    .air img {
+        display: none;
+    }
+}
+/*服务流程结束*/
+/*伙伴之言开始*/
+.banner-pre, .banner-next {
+    position: absolute;
+    top: 47%;
+    z-index: 5;
+    display: inline-block;
+    margin-top: -10px;
+}
+.friend {
+    background-color: #f6f7f8;
+    padding: 0 0 50px 0;
+}
+.home-friend {
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+}
+.home-friend img {
+    margin: 4px auto ;
+}
+.home-friend img+p {
+    font-weight: bold;
+}
+.bg02 {
+    width:100px;
+    height: 100px;
+    border: 1px solid #cccccc;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.bg02img {
+    padding-top: 20px;
+}
+
+
+.home-comment {
+    padding-bottom: 75px;
+}
+
+.home-friend {
+    color: #999999;
+    background-color: rgb(255, 255, 255);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #F0F0F0;
+    padding: 30px 17px 0 17px;
+    margin: 2px 0;
+    min-height: 338px;
+}
+
+.home-friend:hover {
+    -moz-box-shadow: 1px 0 20px #DAE0E3;
+    -webkit-box-shadow: 1px 0 20px #DAE0E3;
+    box-shadow: 1px 0 20px #DAE0E3;
+}
+
+.home-friend-name {
+    color: #294154;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.home-friend-introduce {
+    color: #666666;
+    font-size: 14px;
+    margin: 10px 0 20px 0;
+}
+
+/*伙伴之言结束*/

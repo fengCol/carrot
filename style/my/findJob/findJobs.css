@@ -1,0 +1,520 @@
+
+@media screen and (min-width: 768px){
+    .companySearch label{
+        display: inline-block;
+        text-align: center;
+        margin: 0;
+        width: 100px;
+        border-right: 1px solid #D9D9D9;
+        line-height: 45px;
+        vertical-align: middle;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .companySearch input{
+        display: inline-block;
+        width: calc(100% - 200px);
+        padding-left: 10px;
+        border: 0;
+        line-height: 45px;
+        outline: none;
+        font-size: 16px;
+    }
+}
+@media screen and (min-width: 992px){
+    .job-block{
+        position: relative;
+        float: left;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 200px;
+    }
+    .job-hover-block{
+        position: relative;
+        margin-left: 200px;
+        width: 640px;
+    }
+    .md-marginRight-75{
+        margin-right: 75px;
+    }
+    .findJobCarouse{
+        margin-left: 200px;
+    }
+}
+@media screen and (min-width: 1200px){
+    .job-block{
+        position: relative;
+        float: left;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 240px;
+    }
+    .job-hover-block{
+        position: relative;
+        margin-left: 225px;
+        width: 776px;
+    }
+    .lg-marginRight-111{
+        margin-right: 111px;
+    }
+    .findJobCarouse{
+        margin-left: 240px;
+    }
+}
+@media screen and (max-width: 767px){
+    .companySearch input{
+        display: inline-block;
+        width: calc(100% - 100px);
+        padding-left: 10px;
+        border: 0;
+        line-height: 45px;
+        outline: none;
+        font-size: 16px;
+    }
+    .col-xs-center{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 991px){
+    .col-sm-hidden{
+        display: none;
+    }
+}
+
+/*左边导航栏开始*/
+
+.inline-block{
+    display: inline-block;
+}
+.vertical-top{
+    vertical-align: top;
+}
+.height-150{
+    height: 150px;
+}
+.height-450{
+    height: 450px;
+}
+.p-relative{
+    position: relative;
+}
+.p-absolute{
+    position: absolute;
+}
+.job-block{
+    padding-left: 8px ;
+    color: #FFF;
+    background-color: #F43851;
+}
+.menu-box:nth-child(1) .job-block{
+    top: 0;
+}
+.menu-box:nth-child(2) .job-block{
+    top: 150px;
+}
+.menu-box:nth-child(3) .job-block{
+    top: 300px
+}
+.img{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+}
+.img1{
+    display: inline-block;
+    width: 7px;
+    height: 13px;
+    vertical-align: middle;
+}
+.job-block h4{
+    line-height: 50px;
+    padding-left: 12px;
+    padding-right: 8px;
+}
+.v-middle{
+    vertical-align: middle;
+}
+.paddingRight20{
+    padding-right: 20px;
+}
+.jobTypeList a{
+    font-size: 14px;
+    color: #FFF;
+}
+.d-inlineblock{
+    display: inline-block;
+}
+
+.jobTypeList{
+    line-height: 30px;
+}
+.jobTypeList a{
+    padding-left: 12px;
+    padding-right: 8px;
+}
+.color-red{
+    color: #fc2b47;
+}
+.font-16{
+    font-size: 16px;
+}
+.font-gray{
+    color: #536a82;
+}
+.job-hover-block{
+    display: none;
+    border-top: 1px solid #F43851;
+    border-right: 1px solid #F43851;
+    border-bottom: 1px solid #F43851;
+    background-color: #FFF;
+    z-index: 999;
+}
+.menu-box{
+    width: 0;
+    height: 150px;
+}
+.menu-box .job-block:hover{
+    color: #F43851;
+    background-color: #FFF;
+}
+.menu-box .job-block:hover a{
+    color: #F43851;
+}
+.menu-box:nth-child(1) .job-block .img{
+    background-image: url(../../../images/findJobs/product.png);
+}
+.menu-box:nth-child(2) .job-block .img{
+    background-image: url(../../../images/findJobs/tech.png);
+}
+.menu-box:nth-child(3) .job-block .img{
+    background-image: url(../../../images/findJobs/design.png);
+}
+.menu-box:nth-child(1):hover .job-block .img{
+    background-image: url(../../../images/findJobs/product-hover.png);
+}
+.menu-box:nth-child(2):hover .job-block .img{
+    background-image: url(../../../images/findJobs/tech-hover.png);
+}
+.menu-box:nth-child(3):hover .job-block .img{
+    background-image: url(../../../images/findJobs/design-hover.png);
+}
+.menu-box .job-block .img1{
+    background-image: url(../../../images/findJobs/toggle.png);
+}
+.menu-box:hover .job-block .img1{
+    background-image: url(../../../images/findJobs/toggle-hover.png);
+}
+.menu-box:nth-child(2) .job-hover-block{
+    margin-top: -150px;
+}
+.menu-box:nth-child(3) .job-hover-block{
+    margin-top: -300px;
+}
+.menu-box:nth-child(1):hover .job-block,.menu-box:nth-child(2):hover .job-block,.menu-box:nth-child(3):hover .job-block{
+    border:1px solid #F43851;
+    color: #F43851;
+    background-color: #FFF;
+}
+.menu-box:nth-child(1):hover .job-block a,.menu-box:nth-child(2):hover .job-block a,.menu-box:nth-child(3):hover .job-block a{
+    color: #F43851;
+}
+.menu-box:nth-child(1) .job-block:hover+.job-hover-block{
+    display: block;
+}
+.menu-box:nth-child(2) .job-block:hover+.job-hover-block{
+    display: block;
+}
+.menu-box:nth-child(3) .job-block:hover+.job-hover-block{
+    display: block;
+}
+.menu-box:nth-child(1) .job-hover-block:hover{
+    display: block;
+}
+.menu-box:nth-child(2) .job-hover-block:hover{
+    display: block;
+}
+.menu-box:nth-child(3) .job-hover-block:hover{
+    display: block;
+}
+.marginTop-26{
+    margin-top: 26px;
+}
+.lineHeight-40{
+    line-height: 40px;
+}
+.lastTypeList:nth-last-child(1) .hover-none{
+    display: none;
+}
+.width-102{
+    width: 102px;
+}
+.paddingLeft-15{
+    padding-left: 15px;
+}
+.paddingLeft-10{
+    padding-left: 10px;
+}
+.font-bold{
+    font-weight: bold;
+}
+.text-right{
+    text-align: right;
+}
+/*找职位banner*/
+.carousel-indicators li{
+    margin: 3px;
+}
+.carousel-indicators .active{
+    margin: 3px;
+}
+/*推荐职位/最新职位*/
+.cursor-pointer{
+    cursor:pointer;
+}
+.fontWeight-bold{
+    font-weight: bold;
+}
+.findJob-job{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #FFF;
+}
+.point{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.float-right{
+    float: right;
+}
+.float-left{
+    float: left;
+}
+.paddingTop-14{
+    padding-top: 14px;
+}
+.paddingBottom-14{
+    padding-bottom: 14px;
+}
+.height-130{
+    height: 130px;
+}
+.borderRadius-10px{
+    border-radius: 10px;
+}
+.findJob-jobList-box{
+    border:1px solid #E9E9E9;
+    margin: 10px 0;
+    line-height: 30px;
+    cursor:pointer;
+}
+.findJob-jobList-box:hover{
+    box-shadow: 0 0 50px #E9E9E9;
+}
+.marginLeft-140{
+    margin-left: 140px;
+}
+.font-16{
+    font-size: 16px;
+}
+.salary{
+    color: #FC2B47;
+}
+.findJob-img{
+    margin-left: 10px;
+}
+.propertyCompany{
+    padding: 36px 20px 46px 20px;
+    background-color: #FFF;
+}
+.propertyCompany-demo{
+    position: relative;
+    z-index: 999;
+}
+.newCompanyLogo img{
+    z-index: 999;
+}
+.companyIntroduce{
+    position: absolute;
+    bottom: 10px;
+    padding-left: 30px;
+    width: 320px;
+}
+.companyIntroduce p{
+    color:#FFF;
+}
+.companyIntroduceList{
+    display: inline-block;
+    margin-right: 16px;
+}
+ .newCompanyLogo img{
+    padding: 0 0 10px 3%;
+
+}
+.companyRecommendCarouse{
+    width: 96%;
+}
+@media not all, (-webkit-transform-3d) {
+    .companyRecommendCarouse .carousel-inner > .item.prev, .companyRecommendCarouse .carousel-inner > .item.active.left {
+        left: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    .companyRecommendCarouse .carousel-inner > .item.next.left, .companyRecommendCarouse .carousel-inner > .item.prev.right, .carousel-inner > .item.active {
+        left: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    .companyRecommendCarouse .carousel-inner > .item.next, .companyRecommendCarouse .carousel-inner > .item.active.right {
+        left: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+}
+.companyRecommendCarouse .carousel-control {
+    display: none;
+}
+.companyRecommendCarouse .carousel-indicators {
+    transform: translateY(-55%) rotate(90deg);
+    left: 104%;
+}
+.companyRecommendCarouse .carousel-indicators li {
+    border: 1px solid #D9D9D9;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.companyRecommendCarouse .carousel-indicators .active {
+    background-color: #FC2B47;
+}
+.companyRecommendCarouse .carousel-inner{
+    top: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border:1px solid #D9D9D9;
+}
+.companyRecommendCarouse .verticalCarouse{
+    margin: 15px;
+    text-align: left;
+    line-height: 40px;
+}
+.marginTop-15{
+    margin-top: -15px;
+}
+.companyRecommendCarouse .industry{
+    display: inline-block;
+    margin-right: 10px;
+    padding:0 6px;
+    height: 20px;
+    line-height: 20px;
+    border:1px solid #D9D9D9;
+    border-radius: 5px;
+}
+.companyRecommendCarouse h4{
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+.companyRecommendCarouse .borderRight{
+    padding: 7px;
+    border-right: 1px solid #D9D9D9;
+}
+.companyRecommendCarouse .carousel-inner>.item{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.popJob{
+    margin-top: 15px;
+    padding-right: 50px;
+    padding-left: 70px;
+    height: 120px;
+    text-align: left;
+    line-height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.popJob p{
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.findJob-footer{
+    margin-top: 40px;
+    background-color: #FFF;
+}
+.findJob-footer>div{
+    display: inline-block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+h3{
+    font-weight: bold;
+}
+.findJob-footer>div>div{
+    margin-top: 20px;
+}
+.findJob-footer>div>div>p{
+    margin-top: 10px;
+}
+.findJob-footer>div>div>div{
+    margin-top: 10px;
+}
+.companySearch{
+    position: absolute;
+    top: 40px;
+    left: 20%;
+    padding: 10px;
+    width: 60%;
+    background-color: rgba(0,0,0,.3);
+    border:1px solid rgb(0,0,0);
+    border-radius: 5px;
+    z-index: 99;
+}
+.companySearch button{
+    display: inline-block;
+    text-align: center;
+    width: 100px;
+    line-height: 45px;
+    font-size: 16px;
+    color: #FFF;
+    background-color: #C9302C;
+}
+.findJobCarouse{
+    position: relative;
+    margin-top: -450px;
+}
+.companySearch{
+    border:1px solid transparent;
+    border-radius: 5px;
+    font-size: 0;
+}
+.companySearch form{
+    background-color: #FFF;
+}
+.paddingRight-15{
+    padding-right: 15px;
+}
+/*轮播图*/
+.findJobTotal .carousel-indicators{
+    display: inline-block;
+}
+.findJobTotal .glyphicon-chevron-right:before{
+    content:"\e080";
+}
+.findJobTotal .glyphicon-chevron-left:before{
+    content:"\e079";
+}
+.popJob p:nth-last-child(1) span{
+    opacity: 0;
+}
+.popJob p span{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.marginBottom-4{
+    margin-bottom: 4px;
+}
+

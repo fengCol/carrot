@@ -1,0 +1,11 @@
+<main class="findJobTotal searchTitle">
+    <div class="container">
+        <div class="row borderBottom">
+            <span class="searchTitleCompany" data-ui-sref="search.companySearch" ng-click="vm.exchangeJob(!vm.isSelect)"
+                  ng-class={"searchActive":!vm.isSelect}>公司</span>
+            <span class="searchTitleJob" data-ui-sref="search.jobSearch" ng-click="vm.exchangeJob(vm.isSelect)"
+                  ng-class={"searchActive":vm.isSelect}>职业</span>
+        </div>
+        <div data-ui-view="" class="row"></div>
+    </div>
+</main>

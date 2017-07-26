@@ -1,0 +1,96 @@
+<main class="findJobTotal">
+    <div class="container backgroundColor-white jobDescription">
+        <div class="col-lg-8 col-md-8 col-xs-12">
+            <div class="job">
+                <div class="jobListPage">
+                    <h3>{{vm.jobDescription.name}}</h3>
+                    <p class="font-12 color-536a82 lineHeight-32">{{vm.jobDescription.companyName}}</p>
+                    <p class="lineHeight-32">
+                        <span class="color-fc2a48">{{vm.jobDescription.compensation|compensationFilter}}</span>
+                        <img src="images/findJobs/address.png" class="v-middle">
+                        <span class="color-536a82">{{vm.jobDescription.province|provinceFilter}}</span>
+                        <img src="images/findJobs/study.png" class="v-middle">
+                        <span class="color-536a82">{{vm.jobDescription.education|educationFilter}}</span>
+                        <img src="images/findJobs/experience.png" class="v-middle">
+                        <span class="color-536a82">{{vm.jobDescription.experience|experienceFilter}}</span>
+                    </p>
+                    <p ng-repeat="salary in vm.jobDescription.tags track by $index" class="salaryBox">{{salary.tag}}</p>
+                    <div class="lineHeight-32 createTime">
+                        <img src="images/findJobs/time.png" class="v-middle">
+                        <span>发布时间:</span>
+                        <span class="">{{vm.jobDescription.updateAt|updateAtFilter}}</span>
+                    </div>
+                    <div class="describe">
+                        <h4>
+                            职位描述
+                        </h4>
+                        <p class="color-536a82 paddingTop-25">岗位职责:</p>
+                        <pre class="color-536a82">{{vm.jobDescription.responsibility}}</pre>
+                        <p class="color-536a82 paddingTop-25">必要条件:</p>
+                        <pre class="color-536a82">{{vm.jobDescription.requisite}}</pre>
+                        <p class="color-536a82 paddingTop-25">公司福利:</p>
+                        <pre ng-repeat="companySalary in vm.jobDescription.companyTags" class="color-536a82">{{companySalary.companyTag}}</pre>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <!--点击按钮触发模态框-->
+                <button class="interested" data-toggle="modal" data-target="#myModal">我感兴趣</button>
+                <div class="share">
+                    <i class="iconfont">&#xe600;</i>
+                    <span class="color-536a82">分享</span>
+                    <span class="social-share"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-12 companyDescription">
+            <div class="text-center">
+                <img ng-src="{{vm.jobDescription.logo}}" data-ui-sref="companyDescription.companyProduct({id:vm.jobDescription.companyId})" class="companyLogo">
+                <p>
+                    {{vm.jobDescription.companyName}}
+                    <img src="images/findJobs/url.png">
+                </p>
+            </div>
+            <h4>
+                基本信息
+                <span class="line"></span>
+            </h4>
+            <div class="marginLeft-60">
+                <p>
+                    <img src="images/findJobs/person-number.png" class="v-middle">
+                    {{vm.jobDescription.totalNum}}
+                </p>
+                <p>
+                    <img src="images/findJobs/industry.png" class="v-middle">
+                    <span ng-repeat="industry in vm.jobDescription.industryList track by $index"> {{industry.industry|industryFilter}}</span>
+                </p>
+            </div>
+        </div>
+        <!--模态框-->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title color-white" id="myModalLabel">
+                            我感兴趣
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <p class="modal-body-title">模式介绍：萝卜多先技术面试-再推荐给用人单位</p>
+                        <p>
+                            萝卜多是一个知根知底的社群招聘。萝卜多的合作企业和候选人，都是萝卜多精心筛选，认证，陪伴多年的伙伴。在萝卜多找工作快，工作有保障。值得您信任的招聘网站。
+                        </p>
+                        <p>
+                            您将感兴趣的职位、公司名称以及您的个人信息发送到我们的邮箱，我们会尽快帮您安排。
+                        </p>
+                        <p>邮箱地址：hr@ptteng.com</p>
+                    </div>
+
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+    </div>
+</main>

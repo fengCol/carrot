@@ -1,0 +1,34 @@
+<div class="recruiting">
+    <h4>在招职位{{vm.theCompanyJob.total}}个</h4>
+    <ul class="recruitingList">
+        <li>职业类别</li>
+        <li ng-repeat="list in vm.options.category track by $index" ng-class="{true:'default'}[list.choose]"
+            ng-click="vm.checkboxMulti($index,vm.options.category)">{{list.name}}</li>
+    </ul>
+    <div ng-if="vm.theCompanyJob.total===0" class="no-item">
+        <div class="col-xs-12 col-sm-5 text-center">
+            <img src="images/home/not.png">
+        </div>
+        <div class="col-xs-12 col-sm-7">
+            <p class="font-bold">暂时没有符合该搜索条件的内容</p>
+            <p>请重新修改搜索条件后再次进行搜索</p>
+        </div>
+    </div>
+    <div ng-if="vm.theCompanyJob.total!=0" ng-repeat="job in vm.theCompanyJob.data track by $index"
+         class="recruitingJob row" data-ui-sref="jobDescription({id:job.id})">
+        <p class="col-xs-12 col-sm-6 col-lg-4">{{job.name}}&nbsp;[{{job.province|provinceFilter}}]</p>
+        <p class="col-xs-12 col-sm-6 col-lg-2">{{job.compensation|compensationFilter}}</p>
+        <p class="col-xs-12 col-sm-6 col-lg-3">{{job.experience|experienceFilter}}/{{job.education|educationFilter}}</p>
+        <p class="col-xs-12 col-sm-6 col-lg-3">{{job.updateAt|updateAtFilter}}发布</p>
+    </div>
+    <!--翻页功能-->
+    <div ng-if="vm.theCompanyJob.total!=0" class="paging">
+        <ul uib-pagination first-text="首页" last-text="末页" next-text="&rsaquo;" previous-text="&lsaquo;"
+            total-items="vm.data.bigTotalItems" ng-model="vm.data.bigCurrentPage" max-size="maxSize" num-pages="numPages"
+            class="pagination-sm" boundary-links="true" force-ellipses="true" ng-change="pageChanged()"></ul>
+        <div>
+            去第<input type="number" ng-model="vm.pageNum">页
+        </div>
+        <button type="button" class="btn" ng-click="vm.setPage(vm.pageNum)">确定</button>
+    </div>
+</div>

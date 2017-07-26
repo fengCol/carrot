@@ -1,0 +1,68 @@
+<main  class="company-list">
+    <div class="container">
+        <div class="row">
+            <img src="images/findElite/company.png" alt="" class="com-list">
+        </div>
+    </div>
+    <div class="container box-top">
+        <div class="row">
+            <div class="company-search">
+                <label>所在地区:</label>
+                <a ng-repeat="list in vm.option.province"
+                   ng-click="vm.checkboxMulti($index,vm.option.province)"
+                   ng-class="{true:'default'}[list.choose]">{{list.name}}</a>
+            </div>
+
+            <div class="company-search">
+                <label >融资规模:</label>
+                <a ng-repeat="list in vm.option.financing"
+                   ng-click="vm.checkboxMulti($index,vm.option.financing)"
+                   ng-class="{true:'default'}[list.choose]">{{list.name}}</a>
+            </div>
+            <div class="company-search">
+            <label>所属行业:</label>
+            <a ng-repeat="list in vm.option.industry"
+               ng-click="vm.checkboxMulti($index,vm.option.industry)"
+               ng-class="{true:'default'}[list.choose]">{{list.name}}</a>
+        </div>
+        </div>
+        <div class="search-btn">
+            <button ng-click="vm.clear()" class="clear">清除</button> <button ng-click="vm.search()" class="search">搜索</button>
+        </div>
+
+    </div>
+    <div class="container box-bottom">
+        <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12 company-mains"
+                     ng-repeat="companylist in vm.company track by $index" index="$index"
+                     ui-sref="companyDescription({id:companylist.id})">
+                        <div class="main-tops">
+                            <div class="top-left">
+                                <span> </span>
+                                <img ng-src="{{companylist.logo}}" alt="" class="company-img">
+                            </div>
+                            <div class="top-right">
+                                <p class="list-name">{{companylist.name}}</p>
+                                <p class="color-gray slogan">{{companylist.slogan}}</p>
+                                <p class="color-gray"><span class="job-red">{{companylist.professionNum}}</span>个在招职位</p>
+                            </div>
+                        </div>
+                        <div class="bg-color ">
+                          <span class="com-indus"> <i class="iconfont ">&#xe616;</i>
+                              <span ng-repeat="company in companylist.industryList track by $index" class="com-indus">
+                                  <span ng-if="!$first">/</span>{{company|industryFilter}}
+                                </span>
+                          </span>
+
+                            <span > <i class="iconfont">&#xe67c;</i>{{companylist.financing|financingFilter}}</span>
+
+                            <span>   <i class="iconfont">&#xe674;</i>{{companylist.province|provinceFilter}}</span>
+                        </div>
+                 </div>
+        </div>
+        <div>
+            <tm-pagination conf="paginationConf"></tm-pagination>
+        </div>
+        <not-find ng-if="vm.isNotFind" showrecommend="{{vm.isShowRecommend}}" size="3"></not-find>
+    </div>
+</main>

@@ -1,0 +1,82 @@
+<div class="a404">
+    <div class="width-100">
+        <div class="width-100" style="overflow: hidden">
+            <div class="col-md-12 a404-cont">
+                <div class="col-sm-5">
+                    <img src="/images/home/not.png" class="img-responsive notfind-img-sm">
+                </div>
+                <div class="col-sm-7 a404-text notfind-text-sm">
+                    <div class="a404-text1">暂时没有符合该搜索条件的内容</div>
+                    <div class="a404-text2">请重新修改搜索条件后再次进行搜索</div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <!--公司-->
+                <div ng-if="showrecommend==='company'" class="width-100 searchRecomendChoice">
+                    <span class="notFindLine"></span>
+                    <div class="row">
+                       <div class="earchCompanyList-title col-xs-12">推荐公司</div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 company-main"
+                            ng-repeat="x in companyList track by $index"
+                            ui-sref="companyDescription.companyProduct({id:x.id})">
+                            <div class="border">
+                                <div class="main-top ">
+                                    <div class="top-left">
+                                        <span> </span>
+                                        <img ng-src="{{x.logo}}" alt="" class="company-img">
+                                    </div>
+                                    <div class="top-right">
+                                        <p class="list-name">{{x.name}}</p>
+                                        <p class="color-gray slogan">{{x.slogan}}</p>
+                                        <p class="color-gray"><span class="job-red">{{x.professionNum}}</span>个在招职位</p>
+                                    </div>
+                                </div>
+                                <div class="bg-color ">
+                                    <span class="com-indus"> <i class="iconfont ">&#xe616;</i>
+                                            <span ng-repeat="company in x.industryList track by $index" class="com-indus">
+                                    <span ng-if="!$first">/</span>{{company|industryFilter}}
+                                    </span>
+                                    </span>
+                                    <span > <i class="iconfont">&#xe67c;</i>{{x.financing|financingFilter}}</span>
+                                    <span>   <i class="iconfont">&#xe674;</i>{{x.province|provinceFilter}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="notFindLine"></span>
+                </div>
+                <!--职位-->
+                <div ng-if="showrecommend==='position'" class="width-100 searchRecomendChoice">
+                    <span class="notFindLine"></span>
+                    <div class="container marginLeft-30">
+                        <div class="row">
+                            <div class="earchCompanyList-title col-xs-12">推荐职位</div>
+                            <div class="col-md-4 col-sm-5 col-xs-12 company-card"
+                                 ng-repeat="x in jobList track by $index"
+                                 ui-sref="jobDescription({id:x.id})">
+                                <div class="company-content ">
+                                    <div class="middle-img-box ">
+                                        <img src="{{x.logo}}" alt="" class="img-responsive">
+                                    </div>
+                                    <div class="companybox-content mg-top-10">
+                                        <p class="word-length-limit findJob-payroll mg-top-6">
+                                            {{x.compensation|compensationFilter}}
+                                        </p>
+                                        <p class="word-length-limit findJob-position">
+                                            {{x.name}}
+                                        </p>
+                                        <p class="word-length-limit findJob-companyName">
+                                            <span>{{x.companyName}}</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--职位结束-->
+                    <span class="notFindLine"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

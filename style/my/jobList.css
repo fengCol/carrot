@@ -1,0 +1,130 @@
+.joblist {
+    padding-bottom: 30px;
+    background-color: #f6f7f8;
+}
+.job-title {
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.list-box {
+    margin-bottom: 30px;
+    background-color: #FFFFFF;
+}
+.job-border {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.job-border:hover {
+    box-shadow: rgb(226, 226, 226) 0px 0px 7px;
+}
+
+
+.logo-img {
+    float: right;
+    margin-top: 11px;
+    margin-right: -10px;
+    height: 110px;
+    width: 110px;
+    border: 1px solid #cccccc;
+}
+.clear-list {
+    float: right;
+    padding: 3px 16px;
+}
+.search-list {
+    float: right;
+    padding: 3px 16px;
+    background-color: #EB5255;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+.default {
+    background-color: #EB5255;
+    color: #FFFFFF;
+}
+.job-search .default:focus,.job-search .default:hover{
+    color:#FFF;
+}
+.choose {
+    background-color: #EB5255;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.job-search {
+    padding:3px 0 3px 0;
+    margin: 8px 8px;
+}
+.job-search a {
+    padding: 6px 12px;
+    margin: 8px 8px;
+}
+a:hover,a:focus{
+    color: #666;
+}
+.select-search {
+    padding: 0 20px 20px 20px;
+    cursor: pointer;
+}
+.job-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+.job-money {
+    color: #EB5255;
+    padding-bottom: 10px;
+}
+.job-tag {
+    text-align: center;
+    width: 100px;
+    height: 25px;
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+}
+
+.left-box  {
+    padding: 25px 0;
+    border-right: 1px solid #cccccc;
+}
+@media screen and (max-width: 990px){
+    .left-box  {
+        padding: 0 0;
+        border: 0;
+    }
+}
+.left-top {
+    padding-bottom: 10px;
+}
+@media screen and (max-width: 992px){
+    .right-set {
+        padding-left: 0;
+    }
+}
+.right-box {
+    padding: 25px 0;
+}
+.cpy-name {
+    font-weight: bold;
+}
+.set-tags span {
+    margin-right: 5px;
+    padding:0 10px;
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+}
+.job-input {
+    margin-left: 5px;
+    padding-left: 10px;
+    width: 40%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.time-color {
+    color: #cccccc;
+    font-size: 12px;
+}

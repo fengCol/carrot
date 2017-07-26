@@ -1,0 +1,199 @@
+<main class="findJobTotal">
+    <div class="hover-block p-relative">
+        <div class="container">
+            <div class="height-450">
+                <div class="row">
+                    <!--侧边搜索栏-->
+                    <div id="menu-box" class="menu-box findJob-search-tags findJob-menu"
+                         ng-repeat="li in vm.list track by $index">
+                        <div class="height-150 col-sm-hidden p-absolute job-block">
+                            <!--一级类目-->
+                            <h4>
+                                <span class="img v-middle"></span>
+                                <span class="lg-marginRight-111 md-marginRight-75 v-middle">{{li.name}}</span>
+                                <span class="img1 v-middle"></span>
+                            </h4>
+                            <!-- 二级类目-->
+                            <div class="jobTypeList v-middle">
+                                <a ng-repeat="item in li.jobTypeList track by $index" class=" d-inlineblock cursor-pointer"
+                                   ui-sref="search.jobSearch({name:item.name,option:true})">
+                                    {{item.name}}
+                                </a>
+                            </div>
+                        </div>
+                        <!--三级类目-->
+                        <div id="menu-sub" class="menu-sub dn col-md-6-5 col-lg-6-5 col-md-offset-2 height-450 p-absolute job-hover-block dn">
+                            <div ng-repeat="item in li.jobTypeList track by $index" class="color-red font-16 marginTop-26 lineHeight-40">
+                                <span class="font-bold text-right width-102 d-inlineblock">{{item.name}}</span>
+                                <a ng-repeat="subItem in item.secondTypeList track by $index" class="font-gray lastTypeList cursor-pointer paddingLeft-15"
+                                   ui-sref="search.jobSearch({name:subItem.name,option:true})">
+                                    <span class="d-inlineblock">{{subItem.name}}</span>
+                                    <span class="paddingLeft-10 hover-none">|</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--找职位banner-->
+                    <div class="findJobCarouse">
+                        <div uib-carousel active="active" interval="3000">
+                            <div uib-slide ng-repeat="carouse in vm.bannerImage track by $index" index="$index">
+                                <a ng-href="{{carouse.url}}" target="_blank" class="cursor-pointer">
+                                    <img ng-src="{{carouse.img}}" width="100%" height="450px">
+                                </a>
+                            </div>
+                        </div>
+                        <!--公司搜索-->
+                        <div class="companySearch">
+                            <form class="text-center">
+                                <label>公司名称</label>
+                                <input type="text" placeholder="输入公司名称" ng-model="someWord">
+                                <button data-ui-sref="search.companySearch({name:someWord,option:false})">搜索</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--推荐职位和最新职位-->
+            <div class="row">
+                <div class="lineHeight-40 paddingLeft-15">
+                    <span ng-click="vm.exchangeJob(!vm.isChoose)" class="cursor-pointer"
+                          ng-class="{'fontWeight-bold':!vm.isChoose,'font-16':!vm.isChoose}">推荐职位</span>
+                    <span ng-click="vm.exchangeJob(vm.isChoose)" class="cursor-pointer "
+                          ng-class="{'fontWeight-bold':vm.isChoose,'font-16':vm.isChoose}">最新职位</span>
+                    <div class="float-right paddingRight-15">
+                        <span class="cursor-pointer cursor-pointer" ui-sref="jobList({judge:vm.isChoose,option:false,recommend:''})">查看更多</span>
+                        <img src="images/findJobs/toggle-more.png" class="marginBottom-4">
+                    </div>
+                </div>
+                <div class="findJob-job col-xs-12">
+                    <div ng-if="!vm.isChoose" ng-repeat="properList in vm.properJob track by $index"
+                         class="findJob-jobList col-sm-12 col-md-6 col-lg-3">
+                        <div class="findJob-jobList-box paddingTop-14 paddingBottom-14 height-130 borderRadius-10px"
+                             ui-sref="jobDescription({recommend:1,id:properList.id})">
+                            <img ng-src="{{properList.logo}}" width="110px" height="102px" class="float-left findJob-img">
+                            <p class="marginLeft-140 font-16 salary point">{{properList.compensation|compensationFilter}}</p>
+                            <p class="marginLeft-140 fontWeight-bold point">{{properList.name}}</p>
+                            <p class="marginLeft-140 point">{{properList.companyName}}</p>
+                        </div>
+                    </div>
+                    <div ng-if="vm.isChoose" ng-repeat="newList in vm.newJob track by $index"
+                         class="findJob-jobList col-sm-12 col-md-6 col-lg-3 ">
+                        <div class="findJob-jobList-box  paddingTop-14 paddingBottom-14 height-130 borderRadius-10px"
+                             data-ui-sref="jobDescription({recommend:0,id:newList.id})">
+                            <img ng-src="{{newList.logo}}" width="110px" height="102px" class="float-left findJob-img">
+                            <p class="marginLeft-140 font-16 salary point">{{newList.compensation|compensationFilter}}</p>
+                            <p class="marginLeft-140 fontWeight-bold point">{{newList.name}}</p>
+                            <p class="marginLeft-140 point">{{newList.companyName}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--推荐公司-->
+            <div>
+                <div class="lineHeight-40 paddingLeft-15">
+                    <span class="font-16 fontWeight-bold">推荐公司</span>
+                    <div class="float-right paddingRight-15">
+                        <span data-ui-sref="search.companySearch({option:false})" class="cursor-pointer">查看更多</span>
+                        <img src="images/findJobs/toggle-more.png" class="marginBottom-4">
+                    </div>
+                </div>
+            </div>
+            <div class="propertyCompany row">
+                <div class="col-sm-4 col-xs-12 propertyCompany-demo"
+                     ui-sref="companyDescription.companyProduct({approvedStatus:1,id:vm.findJobRecommendCompany.id})">
+                    <img ng-src="{{vm.findJobRecommendCompany.logo}}" width="100%" height="200px" class="cursor-pointer">
+                    <div class="companyIntroduce">
+                        <p>{{vm.findJobRecommendCompany.name}}</p>
+                        <p>{{vm.findJobRecommendCompany.slogan}}</p>
+                        <div>
+                            <p class="companyIntroduceList">
+                                <i class="iconfont">&#xe67c;</i>
+                                <span>{{vm.findJobRecommendCompany.industryList[0]|industryFilter}}</span>
+                            </p>
+                            <p class="companyIntroduceList">
+                                <i class="iconfont">&#xe610;</i>
+                                <span>{{vm.findJobRecommendCompany.financing|financingFilter}}</span>
+                            </p>
+                            <p class="companyIntroduceList">
+                                <i class="iconfont">&#xe674;</i>
+                                <span>{{vm.findJobRecommendCompany.province|provinceFilter}}</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--普通公司-->
+                <div class="col-sm-8 col-xs-12 newCompanyLogo">
+                    <div ng-repeat="company in vm.findJobNormalCompany track by $index"
+                         ui-sref="companyDescription.companyProduct({approvedStatus:0,id:company.company.id})">
+                        <img ng-src="{{company.company.logo}}" class="col-xs-3 cursor-pointer" height="100px">
+                    </div>
+                </div>
+                <!--竖向轮播-->
+                <div class="companyRecommendCarouse">
+                    <div uib-carousel active="active1" interval="3000">
+                        <div uib-slide ng-repeat="companyCarouse in vm.findJobApprovedCompany track by $index" index="$index"
+                             ui-sref="companyDescription.companyProduct({approvedStatus:1,id:companyCarouse.company.id})">
+                            <div class="row">
+                                <div class="col-xs-l2">
+                                    <div class="col-xs-7 borderRight cursor-pointer">
+                                        <div class="col-md-4 col-sm-hidden">
+                                            <img ng-src="{{companyCarouse.company.logo}}" width="168px" height="126px">
+                                        </div>
+                                        <div class="col-md-7 verticalCarouse">
+                                            <h4>{{companyCarouse.company.name}}</h4>
+                                            <p class="marginTop-15">{{companyCarouse.company.slogan}}</p>
+                                            <p ng-repeat="industry in companyCarouse.industryList" class="industry">
+                                                <span> {{industry.industry|industryFilter}}</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-5 popJob cursor-pointer">
+                                        <h4>正在热招</h4>
+                                        <p ng-repeat="job in companyCarouse.hirring track by $index">
+                                            {{job.name}}
+                                            <span>|</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--写死部分-->
+            <div class="findJob-footer row">
+                <div class="col-xs-12">
+                    <div class="col-lg-3 col-sm-3 col-xs-12 col-sm-offset-2 col-xs-center">
+                        <img src="images/findJobs/noDanger.png" >
+                    </div>
+                    <div class="col-lg-3 col-sm-3 col-xs-12 col-sm-offset-1 col-xs-center">
+                        <h3>无成本，零风险</h3>
+                        <p>无任何隐含费用全程免费</p>
+                        <p>人才从投递到成功入职不需要任何费用，通过测试后还可免费提供从业建议,不浪费每一分天赋。</p>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="col-lg-3 col-sm-3 col-xs-12 col-sm-offset-2 col-xs-center">
+                        <h3>高效匹配，高度契合</h3>
+                        <div>
+                            <p>1-3天发送首个聘请通知</p>
+                            <p>甄选职位 深度匹配 发送聘请通知</p>
+                        </div>
+                        <div>
+                            <p>3-5天安排候选人面试</p>
+                            <p>安排面试 协助客户快速入职</p>
+                        </div>
+                        <div>
+                            <p>平均15天推荐成功</p>
+                            <p>多方洽谈 售后服务</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-3 col-xs-12 col-sm-offset-1 col-xs-center">
+                        <img src="images/findJobs/efficient.png">
+                    </div>
+                </div>
+                <img src="images/findJobs/kefu@ptteng.png" width="100%">
+            </div>
+        </div>
+    </div>
+</main>

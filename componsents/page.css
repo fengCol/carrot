@@ -1,0 +1,23 @@
+.page-list{
+    float: right;
+}
+.page-list .pagination span {cursor: pointer;}
+.page-list .pagination .separate span{cursor: default; border-top:none;border-bottom:none;}
+.page-list .pagination .separate span:hover {background: none;}
+.page-list .page-total {display: inline-block; margin: 20px; float: right}
+.page-list .page-total input, .page-list .page-total select{height: 26px; border: 1px solid #ddd;}
+.page-list .page-total input {width: 40px; padding-left:3px; text-align: center}
+.page-list .page-total select {width: 50px;}
+.page-total span{
+    display: inline-block;
+    width: 54px;
+    height: 32px;
+    border: 1px solid #E9E9E9;
+    text-align: center;
+    line-height: 32px;
+    background-color: #fc2b47;
+    cursor: pointer;
+}
+.page-total span a{
+    color: #FFF;
+}

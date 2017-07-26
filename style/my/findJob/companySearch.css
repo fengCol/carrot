@@ -1,0 +1,156 @@
+.bg-gray{
+    background-color: #F6F7F8;
+}
+.bg-white{
+    background-color: #FFF;
+}
+.company-list {
+    background-color: #fcfcfc;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.search-remind-word{
+    color: #999;
+}
+.box-top {
+    background-color: #FFFFFF;
+    margin-bottom: 30px;
+}
+.box-bottom {
+    margin-top: 20px;
+    background-color: #FFF;
+}
+
+.company-main {
+    padding: 20px ;
+}
+.select-search{
+    padding-bottom: 15px;
+}
+.border {
+    border: 1px solid #d9d9d9;
+}
+.bg-color {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #f7f7f7;
+
+}
+.bg-color span {
+    flex: 1;
+    text-align: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+}
+.com-indus {
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.main-top {
+    display: flex;
+    margin: 22px;
+    overflow: hidden;
+}
+.main-top:hover {
+    box-shadow: rgb(226, 226, 226) 0 0 7px;
+}
+.top-right {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    height: 112px;
+    line-height: 31px;
+}
+.top-right h4{
+    height: 33px;
+    line-height: 33px;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.top-right p {
+    color: #536a82;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.top-left {
+    height: 110px;
+    width: 110px;
+    font-size: 0;
+    text-align: center;
+    box-sizing: content-box;
+    border: 1px solid #cccccc;
+}
+.top-left span {
+    height: 100%;
+    width: 0;
+    overflow: hidden;
+}
+.top-left img{
+    width: 110px;
+    height: 100%;
+}
+.job-red {
+    color: #FC2B47;
+}
+.default {
+    background-color: #FC2B47;
+    color: #FFFFFF;
+}
+.company-search .default:focus,.company-search .default:hover{
+    color:#FFF;
+}
+a:hover,a:focus{
+    color: #666;
+}
+.company-search {
+    padding: 4px 15px;
+    margin: 5px 5px;
+}
+.company-search a {
+    padding: 4px 15px;
+    margin: 5px 5px;
+}
+.bg-color .iconfont{
+    color: #BCBCBC;
+}
+.bg-color span{
+    font-size: 12px;
+    color: #999;
+}
+.search-btn {
+    float: right;
+}
+.search-btn button{
+    padding: 4px 15px;
+}
+.clear {
+    background-color: #FC2B47;
+    color: #FFFFFF;
+    padding: 5px 5px;
+}
+.com-list  {
+    max-width: 100%;
+}
+.company-input {
+    padding-left: 10px;
+    width: 40%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+.border:hover{
+    box-shadow:0 0 50px #E9E9E9;
+
+}

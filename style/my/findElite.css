@@ -1,0 +1,146 @@
+.concentrate {
+    background-color: #fcfcfc;
+}
+.circle {
+    margin: 0 auto;
+}
+.circle img {
+    width: 35px;
+    height: 50px;
+    position: absolute;
+    left: 30px;
+    top: 25px;
+}
+.circle+p {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.service {
+    background-color: #fcfcfc;
+    padding: 75px 0 75px 0;
+}
+.good {
+    padding: 75px 0 75px 0;
+    display: flex;
+    justify-content: center;
+}
+.we{
+    padding: 75px 0 75px 0;
+}
+.serviceline {
+    width: 20px;
+    height: 50px;
+    border-left: 2px dashed #c9302c;
+    margin: 0 auto;
+    position: relative;
+ }
+.serviceline img {
+    position: absolute;
+    left: -10px;
+    top: 20px;
+}
+.service-box {
+   text-align: center;
+}
+.luobo-process {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.service-process p{
+    display: inline-block;
+    text-align: left;
+    width: 150px;
+    height: 100px;
+    padding-left: 15px;
+}
+.service-process img {
+    vertical-align: top;
+}
+.serviceFont {
+    padding-top: 20px;
+}
+.top-img {
+    padding-left: 140px;
+}
+.center-img {
+    padding-right: 160px;
+}
+.bottom-img {
+    padding-left: 140px;
+}
+.success{
+    background-color:#fcfcfc ;
+    padding: 75px 0 75px 0;
+}
+.set-good {
+    width: 200px;
+    height: 180px;
+    border-radius: 5px;
+}
+
+.text-title {
+    text-align: center;
+    padding-bottom: 40px;
+}
+.text-title h4 {
+    font-weight: bold;
+}
+
+.set-company {
+    background-color: #fc2a48;
+    color: #FFFFFF;
+    width: 182px;
+    height: 55px;
+    border-radius: 5px;
+}
+
+.box-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+.box-size {
+    font-size: 16px;
+    font-weight: 500;
+}
+.adv-set {
+    text-align:center;
+    padding-top: 20px;
+}
+.adv-set p {
+    padding-top: 20px;
+    font-weight: 600;
+}
+.join-company {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width:490px ){
+    .Elite-img {
+        max-width: 100%;
+    }
+}
+@media screen and (max-width:430px ){
+    .top-img {
+       padding-left: 0;
+    }
+    .center-img {
+        padding-right: 0;
+    }
+    .bottom-img {
+        padding-left: 0;
+    }
+    .serviceline {
+        display: none;
+    }
+    .service-process {
+        padding-top: 20px;
+    }
+    .set-good {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
